@@ -49,8 +49,7 @@ See `traj-dist/benchmark.py` to generate this benchmark on your computer.
 
 ## References
 
-1. *H.  Alt  and  M.  Godau,  “Computing  the  frechet  distance  between  two
-polygonal curves,”
+1. *H.  Alt  and  M.  Godau,  “Computing  the  frechet  distance  between  two polygonal curves,”
 International Journal of Computational Geometry &
 Applications
 , vol. 5, no. 01n02, pp. 75–91, 1995.*
