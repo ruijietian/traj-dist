@@ -45,7 +45,7 @@ See `traj-dist/benchmark.py` file for a small working exemple.
 Some distance requires extra-parameters.
 See the help function for more information about how to use each distance.
 
-See `traj_dist/benchmark.py` to generate this benchmark on your computer.
+See `traj-dist/benchmark.py` to generate this benchmark on your computer.
 
 ## References
 
