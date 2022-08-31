@@ -1,5 +1,4 @@
 from .basic_euclidean import point_to_trajectory, eucl_dist_traj, eucl_dist
-from .basic_spherical import point_to_path, great_circle_distance, great_circle_distance_traj
 
 
 ######################

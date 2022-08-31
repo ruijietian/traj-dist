@@ -1,16 +1,17 @@
 import numpy as np
 import distance as tdist
-import pickle
 if __name__ == '__main__':
-    traj_A = np.array([[1,1],[1,2],[3,2],[4,4],[4,5],[5,5]],dtype=float)
-    traj_B = np.array([[1,1],[4,1],[4,3],[4,5],[4,6],[5,6]],dtype=float)
-    dist = tdist.dtw(traj_A, traj_B)
+    traj_1 = np.array([[1,1],[1,2],[3,2],[4,4],[5,4],[6,4]],dtype=float)
+    traj_3 = np.array([[0,1],[4,2],[4,4],[3,6],[5,5],[6,4]],dtype=float)
+    dist = tdist.dtw(traj_1, traj_3)
     print(dist)
-    dist = tdist.frechet(traj_A, traj_B)
+    dist = tdist.frechet(traj_1, traj_3)
     print(dist)
-    dist = tdist.edr(traj_A, traj_B,eps=1)
+    dist = tdist.hausdorff(traj_1, traj_3)
     print(dist)
-    dist = tdist.lcss(traj_A, traj_B,eps=1)
+    dist = tdist.edr(traj_1, traj_3,eps=1)
+    print(dist)
+    dist = tdist.lcss(traj_1, traj_3,delta=1,eps=1,)
     print(dist)
     
 #traj_list = pickle.load(open("E:\code\traj-dist\data\benchmark_trajectories.pkl", "rb"))[:10]

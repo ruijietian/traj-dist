@@ -1,5 +1,4 @@
 from .basic_euclidean import eucl_dist
-from .basic_spherical import great_circle_distance
 import numpy as np
 
 ######################
@@ -37,8 +36,8 @@ def e_edr(t0, t1, eps):
                 subcost = 1
             C[i][j] = min(C[i][j - 1] + 1, C[i - 1][j] + 1, C[i - 1][j - 1] + subcost)
     #print(C[n0][n1])
-    edr = C[n0][n1]
-    #edr =  float(C[n0][n1])/ max([n0, n1])
+    #edr = C[n0][n1]
+    edr =  float(C[n0][n1])/ max([n0, n1])
     return edr
 
 

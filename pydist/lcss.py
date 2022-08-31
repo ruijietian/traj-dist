@@ -1,12 +1,11 @@
 from .basic_euclidean import eucl_dist
-from .basic_spherical import great_circle_distance
 
 ###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
 ######################
 # Euclidean Geometry #
 ######################
 
-def e_lcss(t0, t1, eps):
+def e_lcss(t0, t1, delta, eps):
     """
     Usage
     -----
@@ -29,12 +28,12 @@ def e_lcss(t0, t1, eps):
     C = [[0] * (n1 + 1) for _ in range(n0 + 1)]
     for i in range(1, n0 + 1):
         for j in range(1, n1 + 1):
-            if eucl_dist(t0[i - 1], t1[j - 1]) <= eps and abs(i-j) <=1:
-                C[i][j] = C[i - 1][j - 1]
+            if eucl_dist(t0[i - 1], t1[j - 1]) <= eps:
+                C[i][j] = C[i - 1][j - 1]+1
             else:
-                C[i][j] = 1 + min(C[i][j - 1], C[i - 1][j])
-    lcss = C[n0][n1]
-    #lcss = 1 - float(C[n0][n1]) / min([n0, n1])
+                C[i][j] = max(C[i][j - 1], C[i - 1][j])
+    #lcss = C[n0][n1]-1
+    lcss = 1 - float(C[n0][n1]) / min([n0, n1])
     return lcss
 
 

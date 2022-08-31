@@ -1,37 +1,25 @@
-from pydist.linecell import trajectory_set_grid
-
-from pydist.sspd import e_sspd
 from pydist.dtw import e_dtw
-from pydist.erp import e_erp
 from pydist.edr import e_edr
 from pydist.lcss import e_lcss
 from pydist.hausdorff import e_hausdorff
-from pydist.discret_frechet import discret_frechet
 from pydist.frechet import frechet
-from pydist.sowd import sowd_grid
-
 import numpy as np
 
 import warnings
 
-__all__ = ["pdist", "cdist", "sspd", "sowd_grid", "frechet", "discret_frechet", "hausdorff", "dtw", "lcss", "edr",
-           "erp"]
+__all__ = ["pdist", "cdist", "frechet", "hausdorff", "dtw", "lcss", "edr",
+           ]
 
-METRIC_DIC = {"spherical": {"sspd": e_sspd,
+METRIC_DIC = {"spherical": {
                             "dtw": e_dtw,
                             "lcss": e_lcss,
                             "hausdorff": e_hausdorff,
-                            "sowd_grid": sowd_grid,
-                            "erp": e_erp,
                             "edr": e_edr},
-              "euclidean": {"sspd": e_sspd,
+              "euclidean": {
                             "dtw": e_dtw,
                             "lcss": e_lcss,
                             "hausdorff": e_hausdorff,
-                            "discret_frechet": discret_frechet,
                             "frechet": frechet,
-                            "sowd_grid": sowd_grid,
-                            "erp": e_erp,
                             "edr": e_edr}}
 
 
@@ -287,7 +275,7 @@ def dtw(traj_1, traj_2, type_d="euclidean"):
     return dist
 
 
-def lcss(traj_1, traj_2, type_d="euclidean", eps=200):
+def lcss(traj_1, traj_2, type_d="euclidean", delta=1,eps=200):
     """
     Usage
     -----
@@ -321,7 +309,7 @@ def lcss(traj_1, traj_2, type_d="euclidean", eps=200):
         raise ValueError("The type_d argument should be 'euclidean' or 'spherical'\ntype_d given is : " + type_d)
 
     dist_func = METRIC_DIC[type_d]["lcss"]
-    dist = dist_func(traj_1, traj_2, eps)
+    dist = dist_func(traj_1, traj_2, delta,eps)
     return dist
 
 

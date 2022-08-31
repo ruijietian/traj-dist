@@ -1,7 +1,5 @@
 import numpy as np
 from .basic_euclidean import eucl_dist
-from .basic_spherical import great_circle_distance
-
 
 ######################
 # Euclidean Geometry #

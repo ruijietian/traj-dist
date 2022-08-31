@@ -6,13 +6,14 @@ It is implemented in Python.
 
 ## Description
 
-4 distances between trajectories are available in the **trajectory_distance**  package.
+5 distances between trajectories are available in the **trajectory_distance**  package.
 
-1. Frechet [4]
-2. Discret Frechet [5]
-3. DTW (Dynamic Time Warping) [6]
-4. LCSS (Longuest Common Subsequence) [7]
-5. EDR (Edit Distance on Real sequence) [9]
+1. Frechet [1]
+2. Hausdorff [2]
+3. Discret Frechet [3]
+4. DTW (Dynamic Time Warping) [4]
+5. LCSS (Longuest Common Subsequence) [5]
+6. EDR (Edit Distance on Real sequence) [6]
 
 * All distances but *Discret Frechet* and *Discret Frechet* are are available with *Euclidean* option :
  *  *Euclidean* is based on Euclidean distance between 2D-coordinates.
@@ -54,21 +55,16 @@ polygonal curves,”
 International Journal of Computational Geometry &
 Applications
 , vol. 5, no. 01n02, pp. 75–91, 1995.*
-2. *T. Eiter and H. Mannila, “Computing discrete fr
- ́
-echet distance,” Citeseer,
-Tech. Rep., 1994.*
+2. *F. Hausdorff, “Grundz uge der mengenlehre,” 1914*
 3. *D. J. Berndt and J. Clifford , “Using dynamic time warping to find patterns in time series.” in KDD workshop, vol. 10, no. 16. Seattle, WA, 1994, pp. 359–370* 
 4. *M. Vlachos, G. Kollios, and D. Gunopulos, “Discovering similar multi-
 dimensional trajectories,” in
 Data Engineering, 2002. Proceedings. 18th
 International Conference on
 .IEEE, 2002, pp. 673–684*
-5. *L. Chen, M. T.
- ̈
+5. *L. Chen, M. T. ̈
 Ozsu, and V. Oria, “Robust and fast similarity search for
-moving object trajectories,” in
-Proceedings of the 2005 ACM SIGMOD
+moving object trajectories,” in Proceedings of the 2005 ACM SIGMOD
 international  conference  on  Management  of  data
 .      ACM,  2005,  pp.
 491–502.*
