@@ -10,10 +10,9 @@ It is implemented in Python.
 
 1. Frechet [1]
 2. Hausdorff [2]
-3. Discret Frechet [3]
-4. DTW (Dynamic Time Warping) [4]
-5. LCSS (Longuest Common Subsequence) [5]
-6. EDR (Edit Distance on Real sequence) [6]
+3. DTW (Dynamic Time Warping) [4]
+4. LCSS (Longuest Common Subsequence) [5]
+5. EDR (Edit Distance on Real sequence) [6]
 
 * All distances but *Discret Frechet* and *Discret Frechet* are are available with *Euclidean* option :
  *  *Euclidean* is based on Euclidean distance between 2D-coordinates.
