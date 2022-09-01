@@ -7,8 +7,6 @@ if __name__ == '__main__':
     print(dist)
     dist = tdist.frechet(traj_1, traj_3)
     print(dist)
-    dist = tdist.hausdorff(traj_1, traj_3)
-    print(dist)
     dist = tdist.edr(traj_1, traj_3,eps=1)
     print(dist)
     dist = tdist.lcss(traj_1, traj_3,delta=1,eps=1,)
