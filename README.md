@@ -1,4 +1,4 @@
-# Tinba: Incremental Partitioning Framework for Efficient Trajectory Analytics
+# trajectory distance measures
 
 **trajectory_distance** is a Python module for computing distances between 2D-trajectory objects.
 It is implemented in Python.
